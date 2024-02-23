@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuition Center Dashboard</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 40px); /* Adjusted height to leave space for the rolling message */
+            border: none;
+        }
+        #rolling-message {
+            position: fixed;
+            bottom: 0;
+            left: 0; /* Start the message from the left side */
+            width: 100%; /* Occupy full width */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            white-space: nowrap; /* Prevent wrapping of the message */
+            overflow: hidden; /* Hide overflowing content */
+            animation: roll 20s linear infinite;
+        }
+        @keyframes roll {
+            0% { transform: translateX(100%); } /* Move from right to left */
+            100% { transform: translateX(-100%); } /* Move back to right */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1AmLZPXGdGath58ViZo4WNDgECDX8uIRcn5eOoogCylk2cBZSMpj2jmvL3HXC4syBnkmxrdfplG5-/pubhtml?gid=1660888023&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <div id="rolling-message">Welcome to our tuition center! This is a rolling message.</div>
+</body>
+</html>
